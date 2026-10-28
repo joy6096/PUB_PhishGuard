@@ -1,0 +1,42 @@
+.env
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.dart_tool/
+build/
+.idea/
+.vscode/
+ml/data/
+
+# Node.js / React / Vite
+node_modules/
+dist/
+.vite/
+
+# Environment secrets
+.env.*
+!.env.example
+
+# Python cache and test artifacts
+.coverage
+htmlcov/
+.mypy_cache/
+.ruff_cache/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Local backups
+backup/
+
+# Generated TypeScript build info
+*.tsbuildinfo
+
+# Backup and broken experimental files
+*.backup
+*.broken.txt
+
+# Local ML dataset
+backend/app/ml/data/PhiLegit-100K.csv

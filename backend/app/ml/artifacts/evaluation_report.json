@@ -1,0 +1,90 @@
+{
+  "dataset": "PhiLegit-100K.csv",
+  "unique_urls": 100000,
+  "label_mapping": {
+    "model_target_1": "phishing",
+    "model_target_0": "legitimate"
+  },
+  "split": {
+    "method": "stratified random split",
+    "test_size": 0.2,
+    "random_state": 42,
+    "train_rows": 80000,
+    "test_rows": 20000
+  },
+  "accuracy": 0.9958,
+  "precision_phishing": 0.9979911611088791,
+  "recall_phishing": 0.9936,
+  "f1_phishing": 0.9957907396271798,
+  "classification_report": {
+    "legitimate": {
+      "precision": 0.9936280366387893,
+      "recall": 0.998,
+      "f1-score": 0.9958092197166234,
+      "support": 10000.0
+    },
+    "phishing": {
+      "precision": 0.9979911611088791,
+      "recall": 0.9936,
+      "f1-score": 0.9957907396271798,
+      "support": 10000.0
+    },
+    "accuracy": 0.9958,
+    "macro avg": {
+      "precision": 0.9958095988738342,
+      "recall": 0.9958,
+      "f1-score": 0.9957999796719016,
+      "support": 20000.0
+    },
+    "weighted avg": {
+      "precision": 0.9958095988738344,
+      "recall": 0.9958,
+      "f1-score": 0.9957999796719016,
+      "support": 20000.0
+    }
+  },
+  "confusion_matrix": [
+    [
+      9980,
+      20
+    ],
+    [
+      64,
+      9936
+    ]
+  ],
+  "feature_importance": {
+    "path_length": 0.19708612038574935,
+    "https": 0.1961131158545577,
+    "http": 0.1918612067902541,
+    "slash_count": 0.18077828405766574,
+    "digit_count": 0.06429882433061727,
+    "digit_ratio": 0.052284288752508803,
+    "url_length": 0.04128058012258968,
+    "has_ip_host": 0.013595936997855142,
+    "dot_count": 0.013204807510327063,
+    "host_label_count": 0.010781084296858704,
+    "subdomain_count": 0.010521688255556355,
+    "host_length": 0.009421954735870921,
+    "hyphen_count": 0.008757543062742781,
+    "special_char_ratio": 0.007087786928370652,
+    "underscore_count": 0.000915550397271214,
+    "has_suspicious_words": 0.0008856486211314449,
+    "question_count": 0.0004074439147468592,
+    "equal_count": 0.0002627094840434069,
+    "query_length": 0.00019723296037887382,
+    "at_count": 7.992600841559891e-05,
+    "has_at_symbol": 7.638113400523878e-05,
+    "ampersand_count": 3.265963785043101e-05,
+    "has_shortener_domain": 3.167806769726568e-05,
+    "percent_count": 1.812985800357263e-05,
+    "has_encoded_chars": 1.532406168239106e-05,
+    "has_punycode": 3.0062821785077673e-06,
+    "has_double_slash_path": 1.0874910708288317e-06
+  },
+  "limitations": [
+    "Random URL-level split may place related domains in both sets.",
+    "Results on this dataset do not guarantee real-world performance.",
+    "Static lexical features do not inspect website content."
+  ]
+}

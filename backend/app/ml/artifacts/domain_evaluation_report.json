@@ -1,0 +1,94 @@
+{
+  "evaluation_type": "domain-wise holdout",
+  "dataset": "PhiLegit-100K.csv",
+  "random_state": 42,
+  "test_size": 0.2,
+  "label_mapping": {
+    "0": "legitimate",
+    "1": "phishing"
+  },
+  "unique_urls": 100000,
+  "unique_domains": 75395,
+  "train_urls": 80529,
+  "test_urls": 19471,
+  "train_domains": 60316,
+  "test_domains": 15079,
+  "domain_overlap_count": 0,
+  "feature_count": 27,
+  "accuracy": 0.9962508345744954,
+  "precision_phishing": 0.9972278494509009,
+  "recall_phishing": 0.995,
+  "f1_phishing": 0.9961126790563928,
+  "classification_report": {
+    "legitimate": {
+      "precision": 0.9953428458184701,
+      "recall": 0.9974183298580082,
+      "f1-score": 0.9963795070178049,
+      "support": 10071.0
+    },
+    "phishing": {
+      "precision": 0.9972278494509009,
+      "recall": 0.995,
+      "f1-score": 0.9961126790563928,
+      "support": 9400.0
+    },
+    "accuracy": 0.9962508345744954,
+    "macro avg": {
+      "precision": 0.9962853476346856,
+      "recall": 0.9962091649290041,
+      "f1-score": 0.9962460930370989,
+      "support": 19471.0
+    },
+    "weighted avg": {
+      "precision": 0.9962528676018838,
+      "recall": 0.9962508345744954,
+      "f1-score": 0.9962506906839095,
+      "support": 19471.0
+    }
+  },
+  "confusion_matrix_rows_true_columns_predicted_labels_0_legit_1_phish": [
+    [
+      10045,
+      26
+    ],
+    [
+      47,
+      9353
+    ]
+  ],
+  "feature_importance": {
+    "https": 0.19881497140405924,
+    "path_length": 0.19244653169596312,
+    "http": 0.18556731326698925,
+    "slash_count": 0.18388545916406196,
+    "digit_count": 0.06976244264700128,
+    "digit_ratio": 0.052921346352392436,
+    "url_length": 0.04062083927211249,
+    "dot_count": 0.01593238553055848,
+    "host_label_count": 0.011801318633583191,
+    "has_ip_host": 0.0111811502603428,
+    "subdomain_count": 0.009993546553837471,
+    "host_length": 0.009408444967062777,
+    "special_char_ratio": 0.006675660610420711,
+    "hyphen_count": 0.006584368528783525,
+    "underscore_count": 0.00237732185735327,
+    "has_suspicious_words": 0.0008566955582508546,
+    "question_count": 0.0003854643659217518,
+    "equal_count": 0.0002880979972715297,
+    "query_length": 0.00022089862196252068,
+    "at_count": 0.00012473140500950632,
+    "has_at_symbol": 6.232021382497248e-05,
+    "has_shortener_domain": 3.7844236694240026e-05,
+    "percent_count": 2.0774748737481383e-05,
+    "has_encoded_chars": 1.22354634299262e-05,
+    "ampersand_count": 1.1300444701719395e-05,
+    "has_punycode": 6.355412662804437e-06,
+    "has_double_slash_path": 1.807870107330135e-07
+  },
+  "limitations": [
+    "Domain-wise holdout tests generalization to unseen registrable domains.",
+    "Results on this dataset do not guarantee real-world performance.",
+    "Static URL features do not inspect webpage content.",
+    "Registrable-domain grouping depends on locally available suffix data."
+  ]
+}
